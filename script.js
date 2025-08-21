@@ -40,7 +40,20 @@ function populateMovies() {
   });
 }
 
+// Show popup on first visit
+function showWelcomePopup() {
+  if (!localStorage.getItem('hasVisited')) {
+    const popup = document.getElementById('welcomePopup');
+    popup.classList.remove('hidden');
+    document.getElementById('popupOkay').addEventListener('click', () => {
+      popup.classList.add('hidden');
+      localStorage.setItem('hasVisited', 'true');
+    });
+  }
+}
+
 // Init
 document.addEventListener('DOMContentLoaded', function() {
   populateMovies();
+  showWelcomePopup();
 });
