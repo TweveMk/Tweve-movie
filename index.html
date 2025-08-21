@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MOVIE ZONE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="flex flex-col min-h-screen">
+  <!-- Header -->
+  <header class="bg-slate-900 p-6 text-center">
+    <h1 class="header-title">MOVIE ZONE</h1>
+  </header>
+
+  <!-- Movies Page -->
+  <main class="flex flex-col flex-grow p-4">
+    <section id="moviesPage">
+      <!-- Download-only Movies -->
+      <div class="flex items-center justify-between mb-2">
+        <h2 class="text-xl font-semibold">Movies — Pakua Tu</h2>
+        <span class="text-xs text-slate-400">Bofya movie kupakua</span>
+      </div>
+      <div class="movie-grid" id="moviesRow"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
